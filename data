@@ -22,8 +22,8 @@ try:
     cur.execute("insert into crop1 values (11,'Corn','Oct-Nov','Sept-Oct', 4,60)")
     cur.execute("insert into crop1 values (12,'Lettuce','Sept-Oct','Oct-Dec',8,45)")
     cur.execute("insert into crop1 values (13,'Radish','Aug-Jan',NULL,2,40)")
-    cur.execute("insert into crop1 values (14,'Pumpkin','Jan-Mar', 'Sept-Dec May-Jun','Jun-Jul Dec-Jan',24,70)")
-    cur.execute("insert into crop1 values (15,'Bitter Gourd','Feb-Mar', 'Jun-JulNov-Dec Dec-Jan Jun-Jul',1 ,55)")
+    cur.execute("insert into crop1 values (14,'Pumpkin','Jan-Mar Sept-Dec May-Jun','Jun-Jul Dec-Jan',24,70)")
+    cur.execute("insert into crop1 values (15,'Bitter Gourd','Feb-Mar', 'Jun-Jul Nov-Dec Dec-Jan Jun-Jul',1 ,55)")
     c.commit()
 except:
     pass
