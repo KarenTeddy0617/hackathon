@@ -1,4 +1,5 @@
 Crop Management and Yield Optimization Project
+
 This project is a web-based tool designed to assist farmers, agricultural experts, and enthusiasts in optimizing crop production. By providing information such as crop type, area, and sowing date, along with an image of the field, the system delivers essential insights to improve agricultural yield and planning.
 Features
 
