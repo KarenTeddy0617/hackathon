@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Information</title>
+</head>
+<body>
+    <h1>Crop Yield Information</h1>
+    
+    <!-- Display Image if Available -->
+    {% if image_url %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ image_url }}" alt="Crop Image" style="max-width: 500px; height: auto;" />
+    {% endif %}
+    
+    <p>Seed Calculation: {{ seed_cal }}</p>
+    <p>Optimal Yield Dates: {{ t[0] }} to {{ t[1] }}</p>
+    <p>Optimal growing time in South India: {{ s_ind }}</p>
+    <p>Optimal growing time in North India : {{ n_ind }}</p>
+</body>
+</html>

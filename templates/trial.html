@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Field Help</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Field Help</h1>
+
+        <!-- Image Upload Section -->
+        <div class="form-group">
+            <label for="image-input">Upload Image of Your Crop Field:</label>
+            <input type="file" name="image-input" id="image-input" accept="image/*" />
+        </div>
+
+        <!-- Manual Input Section -->
+        <form id="myForm" action="/pagetwo" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="manualarea">Enter Field Area (sq. feet):</label>
+                <input type="number" name="manualarea" id="manualarea" placeholder="Enter area" required />
+            </div>
+
+            <!-- Crop Selection Section -->
+            <div class="form-group">
+                <label for="crop-select">Select Crop:</label>
+                <select name="crop-select" id="crop-select" required>
+                    <option value="" disabled selected>Select a crop</option>
+                    <option value="Onion">Onion</option>
+                    <option value="Bottle Gourd">Bottle Gourd</option>
+                    <option value="Carrot">Carrot</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Melon">Melon</option>
+                    <option value="Potato">Potato</option>
+                    <option value="Cabbage">Cabbage</option>
+                    <option value="Beans">Beans</option>
+                    <option value="Brocolli">Brocolli</option>
+                    <option value="Cucumber">Cucumber</option>
+                    <option value="Corn">Corn</option>
+                    <option value="Lettuce">Lettuce</option>
+                    <option value="Radish">Radish</option>
+                    <option value="Pumpkin">Pumpkin</option>
+                    <option value="Bitter Gourd">Bitter Gourd</option>
+                </select>
+            </div>
+
+            <!-- Date Selection Section -->
+            <div class="form-group">
+                <label for="date-input">Select Date:</label>
+                <input type="date" name="date-input" id="date-input" required />
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submit-button" class="button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // You can add validation or any additional JS functionality here if needed
+    </script>
+</body>
+</html>
